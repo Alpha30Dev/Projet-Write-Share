@@ -1,0 +1,182 @@
+body {
+    margin: 0%;
+    overflow-x: hidden;
+}
+
+.navbarsmartphone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px 0 8px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-icons-smartphone img {
+    height: 25px;
+    margin-right: 0.5rem;
+}
+
+.logosmartphone img {
+    width: 75px;
+}
+
+.menuhamburger img {
+    height: 25px;
+    cursor: pointer;
+}
+
+/* Centrer le logo et placer les icônes et le menu */
+.nav-icons-smartphone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logosmartphone {
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbardesktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navbarsmartphone {
+        display: none;
+    }
+
+    .navbardesktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px 20px;
+        border-bottom: 1px solid #ddd;
+        font-size: 14px;
+    }
+    
+    .left-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-decoration: none;
+    }
+    
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .arrow-icon {
+        height: 10px;
+    }
+
+    .profile-pic {
+        height: 25px;
+        vertical-align: middle;
+    }
+
+    .profile-container {
+        gap: 5px;	
+        display: flex;
+        align-items: center;
+        height: 30px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .search-icon {
+        height: 15px;
+        vertical-align: middle;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+}
+
+.story-category {
+    text-align: left;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.stories-carousel {
+    margin: 20px 0 0 10px;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow-x: scroll;
+    scroll-snap-type: mandatory;
+    display: flex;
+    -webkit-overflow-scrolling: touch; /* Pour un défilement fluide sur iOS */
+}
+
+
+
+.story-slide {
+    flex: 0 0 90%; /* Prend 90% de la largeur du conteneur */
+    margin-right: 20px;
+    scroll-snap-align: start;
+}
+
+.story-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    color: white;
+}
+
+.story-overlay h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.story-overlay .author {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+
+
