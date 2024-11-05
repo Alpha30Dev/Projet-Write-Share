@@ -1,0 +1,137 @@
+.footer {
+    background-color: #f8f9fa;
+    color: #212529;
+    padding: 20px 10px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    border-top: 1px solid #dee2e6;
+    font-size: 0.8em;
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+.signup-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    border-radius: 10px;
+    background-color: white;
+}
+.signup-option img{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    text-align: center;
+}
+
+.signup-option {
+    margin: 20px 0;
+}
+
+p {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px 20px;
+   cursor: pointer;
+   width: 50%;
+   height: 50%;
+   margin: 10px;
+}
+.btn2{
+    background-color: black;
+    color: white;
+}
+
+.btn, .btn2 img {
+display: flex;
+justify-content: flex-start;
+}
+h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+}
+#audio-player {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#audio-player h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+audio {
+    width: 100%;
+    max-width: 600px;  
+    margin-top: 20px;
+}
