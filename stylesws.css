@@ -9,6 +9,10 @@ body {
     padding: 0 8px 0 8px;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
 }
 .nav-icons-smartphone img {
     height: 40px;
@@ -36,6 +40,9 @@ body {
 .navbardesktop {
     display: none;
 }
+.nav-links{
+    cursor: pointer;
+}
 #writebutton{
     text-decoration: none;
     color: black;
@@ -51,6 +58,11 @@ body {
         padding: 2px 20px;
         border-bottom: 1px solid #ddd;
         font-size: 20px;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        width: 100%;
+        background-color: #ffffff;
     }
     .left-section {
         display: flex;
@@ -95,6 +107,9 @@ body {
         gap: 5px;
     }
 }
+img{
+    cursor: pointer;
+}
 .story-category {
     text-align: left;
     margin-bottom: 10px;
@@ -103,7 +118,7 @@ body {
     font-weight: bold;
 }
 .stories-carousel {
-    margin: 30px 0 0 20px;
+    margin: 100px 0 0 20px;
     width: 100%;
     height: 300px;
     position: relative;
@@ -143,12 +158,13 @@ body {
         rgba(0, 0, 0, 0.8) 0%,
         rgba(0, 0, 0, 0) 100%
     );
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .story-overlay h2 {
     margin: 0;
     font-size: 1.5rem;
     font-weight: bold;
+    color: rgb(255, 255, 255);
 }
 .story-overlay .author {
     margin: 5px 0 0 0;
@@ -170,7 +186,7 @@ body {
     .stories-carousel {
         width: 80%;
         height: 400px;
-        margin: 30px auto;
+        margin: 1px auto;
         overflow: hidden;
         position: relative;
     }
@@ -277,10 +293,10 @@ body {
 }
 .progress-bar {
     width: 100%;
-    height: 3px;
+    height: 6px;
     background-color: #ddd;
     border-radius: 2px;
-    margin-top: 5px;
+    margin-top: 20px;
 }
 .progress {
     height: 100%;
@@ -326,6 +342,20 @@ body {
     font-size: 24px;
     margin-bottom: 8px;
 }
+.hover-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 1rem;
+    opacity: 1;
+}
+.book-card:hover {
+    transform: none;
+    transform: translateY(-10px); 
+    box-shadow: 0 5px 15px rgb(0, 0, 0); 
+}
 .subtitle {
     color: #666;
     margin-bottom: 20px;
@@ -340,6 +370,19 @@ body {
 .book-card {
     flex: 0 0 auto;
     width: 200px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease; 
+    cursor: pointer;
+}
+.book-card:hover .hover-overlay {
+    opacity: 1;
+}
+.book-stats {
+    display: flex;
+    justify-content: space-between;
+    color: white;
 }
 .book-card img {
     width: 100%;
@@ -444,6 +487,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-width: 100px;
+    transition: transform 0.3s ease; /* Ajouter la transition pour un effet fluide */
 }
 .finished-story-card img {
     width: 100px;
@@ -451,6 +495,11 @@ body {
     object-fit: cover;
     border-radius: 8px;
 }
+.finished-story-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+    cursor: pointer;
+    }
 .story-info h3 {
     font-size: 12px;
     text-align: center;
@@ -596,7 +645,7 @@ hr{
 }
 .cover-upload {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .upload-placeholder {
     width: 150px;
@@ -606,6 +655,14 @@ hr{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    border: 2px dashed #857d7d;
+}
+.file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
     cursor: pointer;
 }
 .plus-icon {
@@ -648,6 +705,8 @@ input[type="text"]:focus, textarea:focus {
     max-width: 500px;
     margin: 0 auto 25px;
     padding: 0 20px;
+    margin-top: 25px;
+    text-align: left;
 }
 .form-group label {
     display: block;
@@ -728,6 +787,14 @@ input[type="text"]:focus, textarea:focus {
     .form-group label {
         font-size: 16px;
     }
+    .cover-form {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 5rem 10rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
     .form-group input[type="text"],
     .form-group select {
         font-size: 16px;
@@ -735,7 +802,21 @@ input[type="text"]:focus, textarea:focus {
     .upload-placeholder {
         width: 250px;
         height: 300px;
+        border: 2px dashed #857d7d;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
     }
+    .upload-placeholder:hover {
+        background-color: #f0f8ff;
+        border-color: #2980b9;
+    }
+    
     .plus-icon {
         font-size: 40px;
     }
@@ -755,3 +836,8 @@ input[type="text"]:focus, textarea:focus {
 footer{
     margin-top: 150px;
 }
+.logoreseau{
+    cursor: pointer;
+}
+
+   
