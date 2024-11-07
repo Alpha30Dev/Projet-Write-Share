@@ -123,7 +123,6 @@ img{
     height: 300px;
     position: relative;
     overflow-x: scroll;
-    scroll-snap-type: mandatory;
     display: flex;
     -webkit-overflow-scrolling: touch;
 }
@@ -133,7 +132,6 @@ img{
 .story-slide {
     flex: 0 0 90%;
     margin-right: 20px;
-    scroll-snap-align: start;
 }
 .story-image {
     position: relative;
@@ -189,6 +187,7 @@ img{
         margin: 1px auto;
         overflow: hidden;
         position: relative;
+        margin-top: 100px;
     }
     .slides-container {
         width: 100%;
@@ -259,7 +258,7 @@ img{
     margin-bottom: 20px;
 }
 .stories-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 5px;
 }
 .stories-header p {
@@ -287,7 +286,7 @@ img{
 }
 .chapters-count {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-top: 8px;
     color: #333;
 }
@@ -305,6 +304,31 @@ img{
 }
 .stories-grid::-webkit-scrollbar {
     display: none;
+}
+.stories-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.stories-arrow {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+}
+
+.stories-arrow img {
+    width: 75px;
+    height: 50px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.stories-arrow:hover img {
+    opacity: 1;
 }
 .stories-grid {
     -ms-overflow-style: none;
@@ -563,6 +587,7 @@ img{
 .liens{
     display: flex;
     justify-content: center;
+
 }
 .community{
     display: flex;
@@ -583,6 +608,7 @@ img{
 .claim{
     display: flex;
     justify-content: center;
+
 }
 .logoreseau1{
     display: flex;
@@ -669,7 +695,7 @@ hr{
     font-size: 30px;
     color: #666;
 }
-h2 {
+.cover-upload-title {
     font-size: 16px;
     color: #333;
     margin: 10px 0;
@@ -789,11 +815,32 @@ input[type="text"]:focus, textarea:focus {
     }
     .cover-form {
         max-width: 800px;
-        margin: 2rem auto;
+        margin-top: 100px;
         padding: 5rem 10rem;
         background: white;
         border-radius: 15px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .page-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        text-align: left;
+        position: absolute;
+        top: 3%;
+        left: 20%;
+        margin-top: 70px;
+        padding: 20px;
+    }
+    
+    .page-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        width: 200px;
+        height: 3px;
+        background-color: #FF9602;
     }
     .form-group input[type="text"],
     .form-group select {
@@ -839,5 +886,3 @@ footer{
 .logoreseau{
     cursor: pointer;
 }
-
-   
